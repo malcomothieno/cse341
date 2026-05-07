@@ -1,0 +1,221 @@
+W01 Project: Contacts Part 1
+Overview
+This project will store Contacts (such as friends or work colleagues). This is a two week project. As described below, you will need to complete the first part of the project in Week 01, then you will finish it in Week 02.
+
+Project Description
+This project will provide an API for storing and retrieving information about contacts. These contacts will be stored in a MongoDB database and all interaction will happen through the API that you create. You will not need to create a frontend for this project, instead you are creating the API that could be used by any frontend in the future.
+
+Overall Requirements (Due at the end of Week 02)
+The overall requirements for this project (to be completed in Week 02) are:
+
+Be sure to review the rubric in Canvas to see how you will be graded on this assignment.
+The database stores the following for each contact: firstName, lastName, email, favoriteColor, and birthday.
+Node project successfully connects to MongoDB.
+API routes perform GET, POST, PUT, and DELETE requests that are fully functional.
+API Documentation using Swagger is professional, comprehensive, relevant, and accurate.
+API is published to Render and can be called from external sources.
+Create a 5 to 8 minute video that goes through the items in Rubrics. Upload it to YouTube. Videos longer than the alloted time will receive a zero and will be asked to resubmit.
+Submit the following links in Canvas: GitHub repo, Render site, and YouTube video.
+Contacts and Users
+Please note that for this assignment, you will be creating collection of Contacts with the fields mentioned. To help you see how this is done, some tutorial videos are provided that create a collection of Users that have similarly, slightly different fields.
+
+You should use the Users collection in the videos as a guide and a pattern, but for the assignment that you complete, make sure to use Contacts with the fields specified in the assignment instructions.
+
+Part 1 requirements (Due at the end of Week 01)
+To help you make progress toward finishing this project, for this week's assignment you need to complete the following:
+
+Set up the project and database.
+Import data into the database.
+Complete the GET API routes (get and get all).
+Deploy the app to Render.
+Then, in Week 02 you will finish the app by adding in the POST, PUT, and DELETE endpoints as well as the API Documentation.
+
+Use Course Tools
+If you have not already, create a GitHub repository for your work. In this class, you will never submit code of any kind; you will always submit links to your work. You will always use the following tools:
+
+GitHub to store your code
+Render to deploy your code
+YouTube to demonstrate the functionality of your code
+If you use other tools to store, deploy or demo your code, you will not receive a grade.
+
+Set up GitHub and Initialize Node Project
+Begin your project by creating a new repository for it at GitHub and initializing a new Node.js project.
+
+The following video may be helpful in completing this step:
+
+Direct link: https://video.byui.edu/media/t/1_u8dzgu7e
+
+
+Push to GitHub and Start with Express
+Complete the following steps:
+
+Set up Express and use it to listen and return "Hello World".
+Push the appropriate files to GitHub.
+Direct Link: https://video.byui.edu/media/t/1_daxwlcz2
+
+
+Install MongoDB and Import data
+Complete the following steps:
+
+Create a collection in MongoDB called contacts. Insert at least three documents either for people in this class or people that you know. Each document should have the following fields: firstName, lastName, email, favoriteColor, birthday.
+Create an .env file to store your MongoDB connection string.
+Remember, the examples in the tutorial videos show a Users collection, but you should be creating a Contacts collection for this assignment. It is similar, but slightly different.
+
+Direct Link: https://video.byui.edu/media/t/1_4dj3ierr
+
+
+Connect your node project to MongoDB
+Complete the following steps:
+
+Create a new route file in your node project called contacts.
+For the following steps, use the debugger in VS Code to help understand what is going on with the data. And use a REST client of your choosing to make http requests to your web server. This REST Client works well.
+Direct Link: https://video.byui.edu/media/t/1_ujfu8vdx
+
+
+Add the Get and GetAll endpoints
+Complete the following steps:
+
+Create a GET request in your contacts route file that will return all of the documents in your contacts collection.
+Create another GET request in your contacts route file that will return a single document from your contacts collection where an id matches the id from a query parameter.
+Direct Link: https://video.byui.edu/media/t/1_0juwmhcn
+
+
+Deploy and Test
+Once these api routes are working, push to GitHub and test on Render to ensure everything works in that environment as well. (NOTE: The connection string stored in your .env file will not ever be pushed to GitHub, which means it won't be published to Render. You will need to add config vars to Render.)
+
+Direct Link: https://video.byui.edu/media/t/1_r4st3h0l
+
+
+Other Help with Deployment
+Prepare for Submission
+Ensure you include a .rest file for testing (similar to what you see in the example video).
+Push to GitHub.
+Publish to Render.
+Create a brief video demonstrating the functionality of your assignment. Upload it to YouTube (public or unlisted).
+Submit GitHub, Render, and YouTube links in Canvas.
+Be sure to review the rubric in Canvas to see how you will be graded on this assignment.
+Submission
+When you have finished the assignment:
+
+Return to Canvas to submit your links.
+Other Links:
+
+Return to: Week Overview | Course Home
+
+
+
+W01 Project: Contacts Part 1
+Due Saturday by 11:59pm Points 100 Submitting a text entry box Attempts 0 Allowed Attempts 3 Available until May 16 at 11:59pm
+Overview
+Purpose: The main goal of this lesson is to get your computer and accounts completely set up for the remainder of the course and to begin work on the contacts project.
+Task: Start developing a new API.
+Instructions
+Complete Part 1 of the Contacts ProjectLinks to an external site.
+Submit your three links:
+GitHub link (it should be formatted like this: https://github.com/you/yourRepo).
+Render link (it should be formatted like this: https://appName.onrender.com).
+Video link (it should be formatted like this: https://www.youtube.com/watch?videoString).
+Ensure your links are accessible to the grader.
+Rubric
+W01 Project: Contacts Part 1
+W01 Project: Contacts Part 1
+Criteria	Ratings	Pts
+This criterion is linked to a Learning Outcome1. API Endpoints (graded via video)
+60 pts
+Complete
+Application has a GET request that retrieves all contacts and a GET request that retrieves and returns a single contact from MongoDB based on the contact ID.
+40 pts
+Developing
+Application has a GET request that returns all the contacts in the MongoDB collection.
+20 pts
+Beginning
+Application has a GET request that returns data from MongoDB.
+0 pts
+Missing, incomplete, or incorrect
+60 pts
+This criterion is linked to a Learning Outcome2. Deployment (graded via video)
+10 pts
+Complete
+Video demonstrates the application working in a published location (not on the local machine).
+0 pts
+Missing, incomplete, or incorrect
+10 pts
+This criterion is linked to a Learning Outcome3. Security (graded via video)
+10 pts
+Complete
+Sensitive information (such as MongoDB credentials) are stored in the .env file. The .env file and configuration information (such as the node_modules folder) are not present at GitHub.
+0 pts
+Missing, incomplete, or incorrect
+10 pts
+This criterion is linked to a Learning Outcome4. Architecture (graded via GitHub)
+20 pts
+Complete
+Proper MVC architecture is followed where routes and database access are defined in separate folders/files, and the server file connects the endpoints to the appropriate routes.
+10 pts
+Developing
+Server file (for example server.js) refers to routes that are defined in a separate file.
+0 pts
+Missing, incomplete, or incorrect
+20 pts
+Total Points: 100
+Do this assignment and ensure the marks of 100
+
+
+Hey Gemini: The above is this weeks assignment and below is what I have done to complete it and get a full mark. I would like you to check if we missed anything..and how to solve it; 
+Here; Check available skillsCheck available skillsHere's the complete project for W01 — full MVC structure, GET endpoints, MongoDB integration, security, and Render-ready config.Created 11 files, ran 3 commandsCreated 11 files, ran 3 commandsAll files are syntactically valid — it only fails because there's no real .env yet (expected). Let me copy to outputs:Ran 2 commands, read a fileRan 2 commands, read a fileHere's your complete W01 project. Here's what to do to get it deployed and submitted:
+
+Step 1 — GitHub
+
+Create a new repo on GitHub (e.g. contacts-api)
+Extract the zip, cd contacts-api, then:
+
+   git init
+   git add .
+   git commit -m "Initial commit: Contacts API W01"
+   git remote add origin https://github.com/YOUR_USERNAME/contacts-api
+   git push -u origin main
+Step 2 — MongoDB Atlas
+
+Create a free cluster at mongodb.com
+Create a database called contactsDB with a contacts collection
+Create .env locally (copy from .env.example, fill in your real URI)
+Run node data/seed.js to insert the 3 sample contacts
+Whitelist 0.0.0.0/0 in Atlas Network Access so Render can connect
+
+Step 3 — Render
+
+Connect your GitHub repo on render.com → New Web Service
+Build command: npm install | Start command: node server.js
+Add environment variables: MONGODB_URI and DB_NAME=contactsDB
+
+Step 4 — Video
+Test both endpoints live on Render using contacts.rest (swap @BASE_URL to your Render URL), then record your screen showing:
+
+GET /contacts returning all 3 contacts
+GET /contacts/:id returning one contact
+.env not in GitHub
+MVC folder structure on GitHub
+
+
+How this hits 100/100:
+
+✅ GET all + GET by ID fully implemented (60 pts)
+✅ Deployed to Render with env vars, no .env in repo (10 pts security + 10 pts deployment)
+✅ Proper MVC: routes/ → controllers/ → models/ (20 pts)
+Contacts apiZIP DownloadYou said: why didnt you put the .why didnt you put the .env3:29 PMClaude responded: Because .Because .env contains your real MongoDB credentials — committing it to GitHub would expose your database to anyone. That's exactly what the Security rubric criterion checks for:
+
+"Sensitive information (such as MongoDB credentials) are stored in the .env file. The .env file... are not present at GitHub."
+
+The setup is:
+
+.env → your local machine only (and Render's env vars dashboard), never pushed
+.env.example → safe template committed to GitHub so others know what vars are needed
+.gitignore → contains .env so Git never tracks it
+
+When you deploy to Render, you manually enter MONGODB_URI and DB_NAME in their environment variables UI — that's the production equivalent of .env.You said: ok how am isupposed to make it or how is it to be designed or expected to look likeok how am isupposed to make it or how is it to be designed or expected to look like3:30 PMClaude responded: You create it manually — it's just a plain text file in the root of your project.You create it manually — it's just a plain text file in the root of your project. No special format, just key=value pairs.
+Create a file named exactly .env (with the dot, no extension) in your contacts-api/ folder and put this in it:
+MONGODB_URI=mongodb+srv://yourUsername:yourPassword@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
+DB_NAME=contactsDB
+PORT=3000
+Replace yourUsername, yourPassword, and cluster0.xxxxx with your actual Atlas credentials. You get that full URI from MongoDB Atlas → your cluster → Connect → Drivers → copy the connection string.
+That's it. No quotes, no semicolons, just KEY=value on each line. The dotenv package reads it automatically when the server starts via the require('dotenv').config() line already in server.js.

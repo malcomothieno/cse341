@@ -1,0 +1,50 @@
+# =============================================
+# Contacts API - REST Client Test File
+# Replace BASE_URL with your Render URL when testing deployed version
+# =============================================
+
+@BASE_URL = http://localhost:3000
+# @BASE_URL = https://your-app-name.onrender.com
+
+### Root - Verify server is running
+GET {{BASE_URL}}/
+
+###
+
+### GET all contacts
+GET {{BASE_URL}}/contacts
+
+###
+
+### GET a single contact by ID (replace with a real _id from your DB)
+GET {{BASE_URL}}/contacts/REPLACE_WITH_REAL_ID
+
+###
+
+### POST - Create a new contact
+POST {{BASE_URL}}/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Johnson",
+  "email": "alice.johnson@example.com",
+  "favoriteColor": "Purple",
+  "birthday": "1995-03-22"
+}
+
+###
+
+### PUT - Update a contact (replace with a real _id)
+PUT {{BASE_URL}}/contacts/REPLACE_WITH_REAL_ID
+Content-Type: application/json
+
+{
+  "favoriteColor": "Teal",
+  "email": "alice.updated@example.com"
+}
+
+###
+
+### DELETE - Delete a contact (replace with a real _id)
+DELETE {{BASE_URL}}/contacts/REPLACE_WITH_REAL_ID
