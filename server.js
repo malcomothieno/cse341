@@ -1,5 +1,7 @@
 require('dotenv').config();
 const express = require('express');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 const { connectToDatabase } = require('./models/db');
 const contactsRouter = require('./routes/contacts');
 
@@ -8,9 +10,12 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
+// Swagger UI at /api-docs
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 // Routes
 app.get('/', (req, res) => {
-  res.send('Contacts API - Welcome! Use /contacts to access the API.');
+  res.send('Contacts API - Welcome! Visit /api-docs for documentation.');
 });
 
 app.use('/contacts', contactsRouter);
@@ -25,6 +30,7 @@ connectToDatabase()
   .then(() => {
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
+      console.log(`Swagger docs available at http://localhost:${PORT}/api-docs`);
     });
   })
   .catch((err) => {

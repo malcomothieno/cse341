@@ -1,13 +1,17 @@
 # =============================================
 # Contacts API - REST Client Test File
-# Replace BASE_URL with your Render URL when testing deployed version
 # =============================================
 
 @BASE_URL = http://localhost:3000
-# @BASE_URL = https://your-app-name.onrender.com
+# @BASE_URL = https://cse341-vwck.onrender.com
 
-### Root - Verify server is running
+### Root
 GET {{BASE_URL}}/
+
+###
+
+### Swagger Docs
+GET {{BASE_URL}}/api-docs
 
 ###
 
@@ -16,12 +20,12 @@ GET {{BASE_URL}}/contacts
 
 ###
 
-### GET a single contact by ID (replace with a real _id from your DB)
+### GET a single contact by ID
 GET {{BASE_URL}}/contacts/REPLACE_WITH_REAL_ID
 
 ###
 
-### POST - Create a new contact
+### POST - Create contact 1
 POST {{BASE_URL}}/contacts
 Content-Type: application/json
 
@@ -35,16 +39,30 @@ Content-Type: application/json
 
 ###
 
-### PUT - Update a contact (replace with a real _id)
+### POST - Create contact 2
+POST {{BASE_URL}}/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Brian",
+  "lastName": "Mwangi",
+  "email": "brian.mwangi@example.com",
+  "favoriteColor": "Orange",
+  "birthday": "1988-07-10"
+}
+
+###
+
+### PUT - Update a contact
 PUT {{BASE_URL}}/contacts/REPLACE_WITH_REAL_ID
 Content-Type: application/json
 
 {
   "favoriteColor": "Teal",
-  "email": "alice.updated@example.com"
+  "email": "updated.email@example.com"
 }
 
 ###
 
-### DELETE - Delete a contact (replace with a real _id)
+### DELETE - Delete a contact
 DELETE {{BASE_URL}}/contacts/REPLACE_WITH_REAL_ID
